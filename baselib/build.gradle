@@ -1,0 +1,156 @@
+apply plugin: 'com.android.library'
+
+android {
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: rootProject.ext.applicationId,
+                JPUSH_APPKEY : rootProject.ext.jpush_key,
+                JPUSH_CHANNEL: "", //用户渠道统计的渠道名称
+        ]
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+        }
+
+    }
+    //设置调试时和正式版时的基本url,会打包到配置文件中
+//    buildTypes {
+//        debug {
+//            buildConfigField "boolean", "LEO_DEBUG", "true"
+//            buildConfigField "String", "BASE_URL", "\"http://ciger.zertone1.com/app/\""
+//        }
+//
+//        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            buildConfigField "boolean", "LEO_DEBUG", "false"
+//            buildConfigField "String", "BASE_URL", "\"http://app.ciger.net/app/\""
+//        }
+//    }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'   // aar目录
+        }
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile(rootProject.ext.dependencies["espresso-core"], {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //分包
+    compile rootProject.ext.dependencies.multidex
+    //各种控件的下拉刷新
+    compile 'com.lcodecorex:tkrefreshlayout:1.0.7'
+    testCompile "junit:junit:$rootProject.ext.junitVersion"
+    compile rootProject.ext.dependencies.constraint
+    compile rootProject.ext.dependencies.appcompatV7
+    compile rootProject.ext.dependencies.design
+    compile rootProject.ext.dependencies.cardView
+    compile rootProject.ext.dependencies.supportV4
+    compile rootProject.ext.dependencies.recyclerview
+    //glide
+     compile rootProject.ext.dependencies.glide
+    //路由
+     compile rootProject.ext.dependencies.api_router
+//    eventBus
+     compile rootProject.ext.dependencies.eventBus
+    //butterknife
+     annotationProcessor rootProject.ext.dependencies.butterknife_compiler
+     compile rootProject.ext.dependencies.butterknife
+
+    //网络请求
+     compile rootProject.ext.dependencies.retrofit
+     compile rootProject.ext.dependencies.rxjava
+
+    compile(rootProject.ext.dependencies.rxandroid) {
+         exclude group: 'io.reactivex.rxjava2'
+     }
+     compile rootProject.ext.dependencies.gson
+     compile(rootProject.ext.dependencies.converterGson) {
+         exclude group: 'com.squareup.retrofit'
+         exclude group: 'com.google.code.gson'
+     }
+     compile(rootProject.ext.dependencies.adapterRxjava) {
+         exclude group: 'com.squareup.retrofit'
+         exclude group: 'com.squareup.okhttp3'
+         exclude group: 'io.reactivex.rxjava2'
+     }
+
+    // //选择图片
+     compile(rootProject.ext.dependencies.choosePic) {
+         exclude group: 'com.android.support'
+         exclude group: 'io.reactivex.rxjava2'
+     }
+     //沉浸式状态栏和沉浸式导航栏
+     compile(rootProject.ext.dependencies.barlibrary) {
+         exclude group: 'com.android.support'
+     }
+     //状态切换显示
+     compile(rootProject.ext.dependencies.stateview) {
+         exclude group: 'com.android.support'
+     }
+
+     //日记log
+     compile rootProject.ext.dependencies.logger
+
+     //基础代码
+     compile(rootProject.ext.dependencies.utilcode) {
+         exclude group: 'com.android.support'
+     }
+     //权限
+     compile(rootProject.ext.dependencies.permission) {
+         exclude group: 'com.android.support'
+     }
+
+    // //图片放大缩小
+     compile rootProject.ext.dependencies.photoview
+     //流式布局
+     compile rootProject.ext.dependencies.flow
+     //刷新
+     compile rootProject.ext.dependencies.refresh
+    //头像
+    // compile rootProject.ext.dependencies.circle_pic
+     //loading动画
+     compile rootProject.ext.dependencies.loading
+    // //轮播图
+     compile rootProject.ext.dependencies.banner
+    // //七牛
+     compile rootProject.ext.dependencies.qiniu
+     //炫酷的textView
+     compile rootProject.ext.dependencies.htextview_scale
+     compile rootProject.ext.dependencies.htextview_base
+    //极光
+     compile rootProject.ext.dependencies.jpush
+     compile rootProject.ext.dependencies.jcore
+     //仿iOS的PickerView控件
+     compile rootProject.ext.dependencies.pick_view
+     //炫酷的图片查看器
+     compile rootProject.ext.dependencies.imageWatcher
+     //微信开放平台
+     compile rootProject.ext.dependencies.wechat
+     //微信支付
+     compile rootProject.ext.dependencies.wx_pay
+
+    compile(name: 'check_box', ext: 'aar')
+//    compile project(':camera')
+    compile project(':imagepickers')
+}

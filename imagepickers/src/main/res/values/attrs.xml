@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 视频播放组件 -->
+    <declare-styleable name="VideoPlayer">
+        <!-- 是否显示顶部布局  -->
+        <attr name="isShowTop" format="boolean" />
+        <!--&lt;!&ndash; 删除按键图标的宽度 &ndash;&gt;-->
+        <!--<attr name="deleteWidth" format="dimension|reference" />-->
+        <!--&lt;!&ndash; 删除按键图标的颜色 &ndash;&gt;-->
+        <!--<attr name="deleteBackgroundColor" format="color|reference" />-->
+    </declare-styleable>
+</resources>

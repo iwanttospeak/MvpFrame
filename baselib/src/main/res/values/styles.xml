@@ -1,0 +1,83 @@
+<resources xmlns:android="http://schemas.android.com/tools">
+
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <!-- BasicDialog显示样式 -->
+    <style name="base_dialog_style" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!-- 边框 -->
+        <item name="android:windowIsFloating">true</item><!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item><!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item><!-- 无标题 -->
+        <item name="android:windowBackground">@color/base_transparent</item><!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item><!-- 模糊 -->
+    </style>
+
+
+
+    <!--时间选择器textView-->
+    <style name="base_tv_data_select">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/base_tv_little_black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <!-- 分割线（竖向）-->
+    <style name="base_separate_vertical">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/base_line_gray</item>
+    </style>
+    <!-- 分割线（横向）-->
+    <style name="base_separate_horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/base_line_gray</item>
+    </style>
+
+    <!-- 字体-->
+    <style name="base_tv_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/base_tv_black</item>
+        <item name="android:textColorHint">@color/base_tv_more_gray</item>
+        <item name="android:textSize">@dimen/base_text_size_14</item>
+    </style>
+    <!-- 字体-->
+    <style name="base_et_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@null</item>
+        <item name="android:textColor">@color/base_tv_black</item>
+        <item name="android:textColorHint">@color/base_tv_more_gray</item>
+        <item name="android:textSize">@dimen/base_text_size_14</item>
+    </style>
+
+
+    <!--editView搜索 -->
+    <style name="base_edit_search">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:background">@null</item>
+        <item name="android:textColorHint">@color/base_tv_gray</item>
+        <item name="android:textColor">@color/base_tv_black</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:paddingLeft">14dp</item>
+        <item name="android:paddingRight">14dp</item>
+        <item name="android:imeOptions">actionSearch</item>
+        <item name="android:gravity">start|center_vertical</item>
+    </style>
+
+</resources>

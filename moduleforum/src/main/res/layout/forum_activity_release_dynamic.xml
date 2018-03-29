@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <include layout="@layout/base_toolbar_head"/>
+
+    <EditText
+        android:id="@+id/et_title"
+        style="@style/base_et_style"
+        android:text="这个烟好抽吗？贵吗？"
+        />
+
+    <View style="@style/base_separate_horizontal"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/et_content"
+            style="@style/base_et_style"
+            android:layout_height="180dp"
+            android:text="帖子内容帖子内容帖子内容帖子内容帖子内容帖子"
+            />
+        <TextView
+            android:id="@+id/tv_content_length"
+            style="@style/base_tv_style"
+            />
+    </FrameLayout>
+
+
+    <View style="@style/base_separate_horizontal"/>
+    <TextView
+        android:id="@+id/tv_img_number"
+        style="@style/base_tv_style"
+        android:text="上传图片5/6"
+        />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_dynamic_img_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+     />
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+apply plugin: 'com.android.library'
+
+android {
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : rootProject.ext.applicationId,
+                JPUSH_APPKEY : rootProject.ext.jpush_key,
+                JPUSH_CHANNEL: "", //用户渠道统计的渠道名称
+        ]
+    }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs '../baselib/libs'   // aar目录
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    compile rootProject.ext.dependencies.appcompatV7
+    testCompile "junit:junit:$rootProject.ext.junitVersion"
+    androidTestImplementation rootProject.ext.dependencies.runner
+    androidTestCompile(rootProject.ext.dependencies["espresso-core"], {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //不能使用implementation 会导致无法隔层依赖
+    compile project(':baselib')
+    //微博
+    compile rootProject.ext.dependencies.weibo
+    implementation files('libs/alipaySingle-20161222.jar')
+    implementation files('libs/open_sdk_r5788.jar')
+}

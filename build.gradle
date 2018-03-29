@@ -1,0 +1,51 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: "config.gradle"
+
+buildscript {
+    repositories {
+        jcenter()
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'me.tatarka:gradle-retrolambda:3.6.0'
+        //ButterKnife使用
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.5.1'
+        //组件化项目下的ButterKnife的使用（生成R2注释）
+//        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+
+        maven { url "https://jitpack.io" }
+        //自动填写验证码框架库
+        maven { url 'https://dl.bintray.com/xiong-it/AndroidRepo' }
+        //微博
+        maven { url "https://dl.bintray.com/thelasterstar/maven/" }
+        google()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+//配置信息
+ext {
+    jpush_key = '30706e58031eb1d7130fba60'
+    applicationId = 'com.yzl.ciger'
+    junitVersion = '4.12'
+    mockitoVersion = '1.10.19'
+    powerMockito = '1.6.2'
+    hamcrestVersion = '1.3'
+    runnerVersion = '0.5'
+    rulesVersion = '0.5'
+    espressoVersion = '2.2.2'
+}

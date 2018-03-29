@@ -1,0 +1,53 @@
+apply plugin: 'com.android.library'
+
+android {
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+        multiDexEnabled = true
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile(rootProject.ext.dependencies["espresso-core"], {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile rootProject.ext.dependencies.appcompatV7
+    //导入glide
+    compile rootProject.ext.dependencies.glide
+    //图片
+    compile 'com.github.chrisbanes:PhotoView:2.0.0'
+    implementation project(':camera')
+    //视频播放
+    compile 'com.shuyu:gsyVideoPlayer-java:2.1.3'
+    //根据需求引入
+    compile 'com.shuyu:gsyVideoPlayer-armv7a:2.1.3'
+    compile 'com.shuyu:gsyVideoPlayer-arm64:2.1.3'
+    compile 'com.shuyu:gsyVideoPlayer-x64:2.1.3'
+    compile 'com.shuyu:gsyVideoPlayer-x86:2.1.3'
+    //压缩算法
+    compile(rootProject.ext.dependencies.advancedluban) {
+        exclude group: 'com.android.support'
+    }
+    compile rootProject.ext.dependencies.supportV4
+}

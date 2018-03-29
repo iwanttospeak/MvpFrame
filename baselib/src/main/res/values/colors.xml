@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 此处设置当前应用的主体颜色-->
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#00AAEE</color>
+    <color name="colorAccent">#00AAEE</color>
+
+    <!--字体颜色-->
+    <color name="base_tv_primary">#111111</color>
+    <color name="base_tv_black">#111111</color>
+    <color name="base_tv_little_black">#222222</color>
+    <color name="base_tv_center_black">#333333</color>
+    <color name="base_tv_gray">#999999</color>
+    <color name="base_tv_more_gray">#666666</color>
+    <color name="base_tv_hint">#999999</color>
+    <!-- gray底色 -->
+    <color name="base_bg_activity_gray">#F0F0F0</color>
+    <!-- 分隔线gray底色 -->
+    <color name="base_bg_line_gray">#F0F0F0</color>
+
+    <!--页面背景颜色-->
+    <color name="base_bg_activity">#4387fe</color>
+
+    <!--分割綫-->
+    <color name="base_line_gray">#000000</color>
+
+    <!-- Wheel -->
+    <color name="base_color_wheel">#c7c7c7</color>
+
+
+
+    <!--BasicDialog透明背景-->
+    <color name="base_transparent">#00000000</color>
+    <!--半透明背景-->
+    <color name="base_half_transparent">#60000000</color>
+    <color name="white">#ffffffff</color>
+    <color name="black">#000000</color>
+    <color name="base_tv_blue">#54BEFF</color>
+
+    <color name="base_bg_red">#FF4259</color>
+
+    <color name="red">#ef534a</color>
+    <color name="gray">#f5f7f6</color>
+
+</resources>

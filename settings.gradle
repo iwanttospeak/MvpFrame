@@ -1,0 +1,1 @@
+include ':imagepickers', ':camera', ':baselib', ':appres', ':modulelogin', ':moduleforum', ':app'

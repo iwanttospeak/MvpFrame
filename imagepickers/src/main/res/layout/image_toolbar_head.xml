@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y44"
+    android:background="@color/color_title_bar">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/image_title_bar_divide_color"/>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+         />
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/image_title_bar_text_color"
+        android:maxLines="1"
+        android:textSize="16sp"
+        android:layout_centerInParent="true"
+        android:maxLength="12"
+        android:ellipsize="end"
+        />
+
+    <TextView
+        android:id="@+id/toolbar_text_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:textColor="@color/image_title_bar_text_color"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/toolbar_img_right"
+        android:layout_width="@dimen/x30"
+        android:layout_height="@dimen/x30"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:padding="5dp"
+        android:layout_marginEnd="8dp"/>
+
+    <ImageView
+        android:id="@+id/toolbar_img_right_two"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toStartOf="@+id/toolbar_img_right"
+        android:padding="5dp" />
+
+
+</RelativeLayout>

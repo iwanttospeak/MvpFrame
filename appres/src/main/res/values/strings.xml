@@ -1,0 +1,27 @@
+<resources>
+
+    <string name="money_unit">"$ %1$s"</string>
+
+
+    <!--分享弹窗-->
+    <string name="share_title">分享至</string>
+    <string name="share_to_wechat">微信</string>
+    <string name="share_to_friend">朋友圈</string>
+    <string name="share_to_weibo">微博</string>
+    <string name="share_to_copy">复制链接</string>
+    <string name="share_to_copy_success">复制链接成功</string>
+    <string name="share_to_sure">确定</string>
+    <string name="share_to_success">分享成功</string>
+    <string name="share_to_fail">分享失败</string>
+
+    <!--支付弹窗-->
+    <string name="pay_dialog_choose_way">请选择支付方式</string>
+    <string name="pay_dialog_use_balance">使用余额</string>
+    <string name="pay_dialog_residue">$%1$s可用</string>
+    <string name="pay_dialog_ali">使用支付宝</string>
+    <string name="pay_dialog_wx">使用微信</string>
+    <string name="pay_dialog_pay_pal">使用PayPal</string>
+    <string name="pay_dialog_bank">使用银行卡</string>
+    <string name="pay_dialog_need_pay">共需支付：</string>
+    <string name="pay_dialog_pay_now">立即支付</string>
+</resources>

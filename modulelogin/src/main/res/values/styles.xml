@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--   ____________________________________LinearLayout____________________________________     -->
+    <!--登录模块LinearLayout包裹内容字 -->
+    <style name="login_wrap_content_linear">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <!--   ____________________________________View ____________________________________     -->
+    <!-- 分隔View自动适配剩下全部空间-->
+    <style name="login_view_divide">
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <!-- 分隔View添加一个分割线-->
+    <style name="login_view_divide_line">
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:drawable">@color/base_bg_line_gray</item>
+    </style>
+    <!-- Relative的中心分隔View-->
+    <style name="login_relative_view_center_divide">
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <!--   ____________________________________EditView___________________________________     -->
+    <style name="login_login_edit">
+        <item name="android:textColorHint">@color/login_tv_small_gray</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/base_tv_little_black</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">phone</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:minHeight">25dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+    <!--   ____________________________________ImageView___________________________________     -->
+    <!--登录模块登录的图标 -->
+    <style name="login_image_icon">
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+    <!--   ____________________________________TextView ____________________________________     -->
+    <!--登录模块textView包裹内容字 -->
+    <style name="login_wrap_tv_gray">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/base_tv_more_gray</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--登录模块textView固定宽度 -->
+    <style name="login_wrap_tv_center_vertical">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">65dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/base_tv_center_black</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginEnd">5dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <!--登录模块textView包裹内容水平居中 -->
+    <style name="login_wrap_center_blue_bg">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:paddingStart">70dp</item>
+        <item name="android:paddingEnd">70dp</item>
+        <item name="android:background">@drawable/login_oval_bg_blue_with_corner</item>
+    </style>
+
+    <!--登录模块textView width=0 -->
+    <style name="login_wrap_tv_no_width">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/base_tv_more_gray</item>
+        <item name="android:gravity">end</item>
+    </style>
+    <!--登陆-->
+    <!--<style name="login_LoginEtStyle">-->
+        <!--<item name="android:textColorHint">@color/login_tv_small_gray</item>-->
+        <!--<item name="android:layout_width">match_parent</item>-->
+        <!--<item name="android:layout_height">wrap_content</item>-->
+        <!--<item name="android:layout_marginLeft">26dp</item>-->
+        <!--<item name="android:layout_marginRight">26dp</item>-->
+        <!--<item name="android:background">@drawable/login_bg_oval_white</item>-->
+        <!--<item name="android:paddingBottom">13dp</item>-->
+        <!--<item name="android:paddingLeft">17dp</item>-->
+        <!--<item name="android:paddingTop">13dp</item>-->
+        <!--<item name="android:textColor">@color/login_tv_black</item>-->
+        <!--<item name="android:textSize">15sp</item>-->
+        <!--<item name="android:drawablePadding">14dp</item>-->
+    <!--</style>-->
+
+    <style name="login_LoginGrayTvStyle">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/login_tv_more_blue</item>
+    </style>
+    <!--注册-->
+    <style name="login_RegisterLinear">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingTop">13dp</item>
+        <item name="android:paddingBottom">13dp</item>
+        <item name="android:paddingLeft">3dp</item>
+        <item name="android:paddingRight">3dp</item>
+    </style>
+    <style name="login_RegisterText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/login_white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="login_RegisterDivide">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/base_bg_activity_gray</item>
+    </style>
+
+
+    <!--注册-->
+    <style name="login_RegisterEditText">
+        <item name="android:textColorHint">@color/login_tv_small_gray</item>
+        <item name="android:textSize">34sp</item>
+        <item name="android:textColor">@color/base_tv_little_black</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">phone</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:minHeight">25dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+    <!--注册-->
+    <style name="login_RegisterEt">
+        <item name="android:textColorHint">@color/login_tv_small_gray</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:paddingTop">13dp</item>
+        <item name="android:paddingBottom">13dp</item>
+        <item name="android:paddingLeft">18dp</item>
+        <item name="android:drawablePadding">14dp</item>
+        <item name="android:textColor">@color/login_tv_black</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginLeft">24dp</item>
+        <item name="android:layout_marginRight">24dp</item>
+        <item name="android:inputType">text</item>
+    </style>
+
+    <style name="login_Login_third_BottomTv">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">25dp</item>
+        <item name="android:textColor">@color/login_tv_black</item>
+    </style>
+
+    <style name="login_PerfectLL">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingTop">15dp</item>
+    </style>
+
+    <style name="login_PerfectLeftTv">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/login_tv_black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="login_PerfectRightEt">
+        <item name="android:inputType">text</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@null</item>
+        <item name="android:textColor">@color/login_tv_black</item>
+        <item name="android:textColorHint">@color/login_tv_small_gray</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="login_PerfectHintTitleTv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingLeft">17dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:textColor">@color/login_tv_red</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="login_PerfectOuterLL">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+    </style>
+</resources>

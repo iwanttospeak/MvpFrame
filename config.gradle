@@ -1,0 +1,86 @@
+ext {
+    android = [
+            compileSdkVersion: 26,
+            buildToolsVersion: "27.0.0",
+            minSdkVersion    : 18,
+            targetSdkVersion : 26,
+            versionCode      : 1,
+            versionName      : "1.0",
+    ]
+
+    compileOptions = [
+            sourceCompatibility: 1.8,
+            targetCompatibility: 1.8
+    ]
+
+    dependencies = [
+            constraint           : 'com.android.support.constraint:constraint-layout:1.0.2',
+            appcompatV7          : 'com.android.support:appcompat-v7:27.0.0',
+            supportV4            : 'com.android.support:support-v4:27.0.0',
+            design               : 'com.android.support:design:27.0.0',
+            cardView             : 'com.android.support:cardview-v7:27.0.0',
+            recyclerview         : 'com.android.support:recyclerview-v7:27.0.0',
+            multidex             : 'com.android.support:multidex:1.0.2',//分包
+            retrofit             : 'com.squareup.retrofit2:retrofit:2.3.0',// https://github.com/square/retrofit
+            rxandroid            : 'io.reactivex.rxjava2:rxandroid:2.0.1', // https://github.com/ReactiveX/RxAndroid
+            rxjava            : 'io.reactivex.rxjava2:rxjava:2.0.5@jar', // https://github.com/ReactiveX/RxAndroid
+            gson                 : 'com.google.code.gson:gson:2.8.2', //https://github.com/google/gson/
+            converterGson        : 'com.squareup.retrofit2:converter-gson:2.3.0', //https://github.com/square/retrofit/tree/master/retrofit-converters/gson
+            adapterRxjava        : 'com.squareup.retrofit2:adapter-rxjava2:2.3.0',//https://github.com/square/retrofit/tree/master/retrofit-adapters/rxjava2
+            stateview            : 'com.github.nukc.stateview:library:1.3.3',    //状态view github:https://github.com/nukc/StateView 网络请求状态view
+            transitionseverywhere: 'com.andkulikov:transitionseverywhere:1.7.6',    //view内转场动画 github:https://github.com/andkulikov/Transitions-Everywhere
+            alerter              : 'com.tapadoo.android:alerter:2.0.0',    //顶部弹窗 github:https://github.com/Tapadoo/Alerter
+            sweetalert           : 'cn.pedant.sweetalert:library:1.3',    //漂亮弹窗 github:https://github.com/pedant/sweet-alert-dialog/blob/master/README.zh.md
+            barlibrary           : 'com.gyf.barlibrary:barlibrary:2.3.0', //沉浸式状态栏和沉浸式导航栏 github:https://github.com/gyf-dev/ImmersionBar
+            htextview_scale  : "com.hanks:htextview-scale:0.1.2",//https://github.com/hanks-zyh/HTextView TextView动画效果
+            htextview_base :    "com.hanks:htextview-base:0.1.2", //TextView动画效果
+            loading              : 'com.wang.avi:library:2.1.3',//进度条加载动画 github:https://github.com/81813780/AVLoadingIndicatorView
+            banner               : 'com.youth.banner:banner:1.4.9', //轮播图 github:https://github.com/youth5201314/banner
+            permission           : 'com.yanzhenjie:permission:1.1.2', //权限申请 github:https://github.com/yanzhenjie/AndPermission
+            refresh              : 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-4',//下拉刷新 github:https://github.com/scwang90/SmartRefreshLayout
+            router               : 'com.alibaba:arouter-api:1.2.4',//路由 github:https://github.com/alibaba/ARouter
+            router_compiler      : 'com.alibaba:arouter-compiler:1.1.4',//路由apt  github:https://github.com/alibaba/ARouter
+            switchButton         : 'com.github.zcweng:switch-button:0.0.3@aar',//仿ios开关 github:https://github.com/zcweng/SwitchButton
+            PickerView           : 'com.contrarywind:Android-PickerView:3.2.6',//仿ios滚轮 github:https://github.com/Bigkoo/Android-PickerView
+            pick_view            : 'com.contrarywind:Android-PickerView:3.2.7',//仿iOS的PickerView控件 gitHub:https://github.com/Bigkoo/Android-PickerView
+            logger               : 'com.orhanobut:logger:2.1.1',//日记 github:https://github.com/orhanobut/logger
+            hawk                 : 'com.orhanobut:hawk:2.0.1',//key-value  数据库  gitHub:https://github.com/orhanobut/hawk
+            api_router           : 'com.alibaba:arouter-api:1.3.0',//路由
+            annotation_router    : 'com.alibaba:arouter-compiler:1.1.4',
+            jpush                : 'cn.jiguang.sdk:jpush:3.0.5',//极光
+            jcore                : 'cn.jiguang.sdk:jcore:1.1.2',
+            wx_pay               : 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:1.3.4',//微信
+            flow                 : 'com.zhy:flowlayout-lib:1.0.3',//流式布局 热门搜索，搜索历史等
+            qiniu                : 'com.qiniu:qiniu-android-sdk:7.3.+',// 七牛 https://developer.qiniu.com/kodo/sdk/1236/android
+            //图片
+            choosePic            : 'com.github.LuckSiege.PictureSelector:picture_library:v2.1.7', //选择图片 github:https://github.com/LuckSiege/PictureSelector
+            imageWatcher         : 'ch.ielse:imagewatcher:1.0.3',//炫酷的图片查看器 http://www.see-source.com/androidwidget/detail.html?wid=1196
+            circle_pic           : 'de.hdodenhof:circleimageview:2.1.0',//圆形图片
+            photoview   :  'com.bm.photoview:library:1.4.1',//图片放大缩小
+
+            eventBus          : 'org.greenrobot:eventbus:3.0.0', //eventBus
+            //butterknife
+            butterknife_compiler : 'com.jakewharton:butterknife-compiler:8.4.0',
+            butterknife     :  "com.jakewharton:butterknife:8.5.1",
+            glide   :  "com.github.bumptech.glide:glide:4.2.0",//glide
+            "runner"                   : "com.android.support.test:runner:1.0.1",
+            "espresso-core"            : "com.android.support.test.espresso:espresso-core:3.0.1",
+            "espresso-contrib"         : "com.android.support.test.espresso:espresso-contrib:3.0.1",
+            "espresso-intents"         : "com.android.support.test.espresso:espresso-intents:3.0.1",
+            //基础代码工具 github:https://github.com/Blankj/AndroidUtilCode
+            "utilcode"                  :  'com.blankj:utilcode:1.9.6',
+            advancedluban   : 'me.shaohui.advancedluban:library:1.3.5',//压缩算法
+            //开放平台
+            wechat               : 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+', // 微信开放平台 https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&id=1417751808&token=&lang=zh_CN
+            weibo                : 'com.sina.weibo.sdk:core:4.1.4:openDefaultRelease@aar',//微博 https://github.com/sinaweibosdk/weibo_android_sdk
+            facebook             : 'com.facebook.android:facebook-login:[4,5)',//facebook登录 https://developers.facebook.com/docs/facebook-login/android
+            bugly                : 'com.tencent.bugly:crashreport:latest.release',//应用崩溃检测服务 https://bugly.qq.com/docs/user-guide/instruction-manual-android/?v=20180119105842
+            //支付
+            paypal               : 'com.paypal.sdk:paypal-android-sdk:2.16.0',//paypal支付 https://github.com/paypal/PayPal-Android-SDK
+            stripe               : 'com.stripe:stripe-android:6.1.1',//美国银行卡支付  'com.stripe:stripe-android:5.1.0'
+
+            //页面动画效果
+            view_dismiss         : 'rb.popview:popview:0.1.0',//消失view离子效果 github:https://github.com/krishnarb3/Popview-Android
+            snow                 : 'com.github.jetradarmobile:android-snowfall:1.1.6',//下雪 github:https://github.com/JetradarMobile/android-snowfall
+    ]
+}

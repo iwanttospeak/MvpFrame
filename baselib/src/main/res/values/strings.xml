@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">baselib</string>
+
+    <string name="base_loading">加载中...</string>
+
+    <string name="base_network_is_not_available">网络连接失败，请检查你的网络设置</string>
+
+
+    <!--验证码 -->
+    <string name="code_send_code">获取验证码</string>
+    <string name="code_empty_phone_hint">手机号不能为空</string>
+    <string name="code_correct_phone_hint">手机号格式不正确</string>
+    <string name="code_send_code_success">验证码发送成功</string>
+    <string name="code_send_code_fail">验证码发送失败</string>
+    <string name="code_wait">%1$s秒后发送</string>
+
+    <!--选择图片dialog -->
+    <string name="dialog_choose_pic">选择图片</string>
+    <string name="dialog_choose_poc_from_camera">用相机拍照</string>
+    <string name="dialog_choose_poc_from_photo">从相册选择</string>
+    <string name="dialog_choose_poc_cancel">取消</string>
+    <string name="dialog_choose_poc_sure">确定</string>
+</resources>

@@ -1,0 +1,82 @@
+if (isModule.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+//    apply plugin: 'com.neenbedankt.android-apt'
+}
+apply plugin: 'com.jakewharton.butterknife'
+
+android {
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName : project.getName() ]
+            }
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: rootProject.ext.applicationId,
+                JPUSH_APPKEY : rootProject.ext.jpush_key,
+                JPUSH_CHANNEL: "", //用户渠道统计的渠道名称
+        ]
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            if (isModule.toBoolean()) {
+                manifest.srcFile 'src/main/module/AndroidManifest.xml'//作为module独立运行
+            } else {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+                java {
+                    exclude 'debug/**'//删除debug包，此处对java文件同样适用，根目录从何java文件夹开始
+                }
+            }
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs '../baselib/libs'   // aar目录
+        }
+    }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile(rootProject.ext.dependencies["espresso-core"], {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile rootProject.ext.dependencies.appcompatV7
+    testCompile "junit:junit:$rootProject.ext.junitVersion"
+    compile rootProject.ext.dependencies.constraint
+    //ali路由
+    annotationProcessor rootProject.ext.dependencies.router_compiler
+    //使用butterknife的module需要进行配置
+    annotationProcessor rootProject.ext.dependencies.butterknife_compiler
+    compile project(':appres')
+    implementation files('libs/open_sdk_r5788.jar')
+
+}

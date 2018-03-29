@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/imagepicker_floder_listitem_height"
+    android:orientation="horizontal"
+    android:background="@drawable/imagepicker_actionbar_menu_selector"
+    android:padding="@dimen/imagepicker_floder_listitem_padding">
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        >
+        <ImageView
+            android:id="@+id/img_floder_listitem_firstImg"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"/>
+        <ImageView
+            android:id="@+id/img_floder_pop_listitem_selected"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginTop="3dp"
+            android:layout_gravity="end|top"
+            android:src="@drawable/image_selected_on"
+            android:visibility="visible"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_floder_pop_listitem_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/imagepicker_floder_listitem_padding"
+        android:layout_marginBottom="@dimen/imagepicker_floder_listitem_padding"
+        android:layout_gravity="center_vertical"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"/>
+    <View android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/tv_floder_pop_listitem_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginEnd="15dp"
+        android:text="1111"
+        android:textSize="14sp"/>
+
+</LinearLayout>

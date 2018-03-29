@@ -1,0 +1,5 @@
+<resources>
+
+    <string name="picker_content_error">获取图片出错</string>
+    <string name="message_image_max_num">最多可以添加%1$s张图片</string>
+</resources>

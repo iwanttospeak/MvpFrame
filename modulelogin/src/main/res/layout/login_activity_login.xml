@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <include layout="@layout/base_toolbar_head"/>
+    <FrameLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+        <ImageView
+            android:layout_width="95dp"
+            android:layout_height="68dp"
+            android:layout_gravity="center"
+            />
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_top"
+        android:orientation="vertical"
+        >
+        <EditText
+            android:id="@+id/et_account"
+            style="@style/login_RegisterEt"
+            android:layout_above="@+id/et_password"
+            android:drawableLeft="@drawable/ic_login_phone"
+            android:hint="@string/login_login_phone"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/et_password"
+            style="@style/login_RegisterEt"
+            android:layout_marginBottom="10dp"
+            android:drawableLeft="@drawable/login_password"
+            android:hint="@string/login_login_password"
+            android:inputType="textPassword"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="26dp"
+            >
+            <TextView
+                android:id="@+id/tv_forget_password"
+                style="@style/login_LoginGrayTvStyle"
+                android:layout_gravity="end"
+                android:text="@string/login_login_forget_password" />
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/bt_login"
+            style="@style/BtOvalBgRed"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@color/base_tv_black"
+            android:text="@string/login_login_login" />
+
+        <TextView
+            android:id="@+id/tv_register"
+            style="@style/login_LoginGrayTvStyle"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:text="@string/login_login_register" />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <TextView
+            style="@style/login_LoginGrayTvStyle"
+            android:text="@string/login_login_other"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="45dp"
+            >
+
+            <ImageView
+                android:id="@+id/tv_qq"
+                style="@style/login_Login_third_BottomTv"
+                android:background="@drawable/res_qq"
+                />
+
+            <ImageView
+                android:id="@+id/tv_chat"
+                style="@style/login_Login_third_BottomTv"
+                android:background="@drawable/res_weixin"
+                />
+            <ImageView
+                android:id="@+id/tv_wei_bo"
+                style="@style/login_Login_third_BottomTv"
+                android:background="@drawable/res_weibo"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

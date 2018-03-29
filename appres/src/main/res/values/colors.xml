@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Pay_dialog -->
+    <color name="base_pay_dialog_yellow">#fa9507</color>
+    <color name="base_pay_dialog_red">#ff6c0a</color>
+
+</resources>

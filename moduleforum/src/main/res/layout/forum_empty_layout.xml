@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_empty_hint"
+        style="@style/base_tv_style"
+        android:layout_centerInParent="true"
+        android:text="暂无帖子"
+        />
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_above="@+id/tv_empty_hint"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/forum_no_forum"
+        />
+    <FrameLayout
+        android:id="@+id/fl_edit_forum"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:background="@drawable/res_round_white_bg"
+        android:layout_above="@+id/tv_empty_hint"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="18dp"
+        >
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/forum_post"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="2dp"
+            />
+    </FrameLayout>
+
+
+</RelativeLayout>

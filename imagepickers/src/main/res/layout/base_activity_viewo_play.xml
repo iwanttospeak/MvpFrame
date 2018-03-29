@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_play"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_title_bar">
+    <!--android:background="#000000"-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fl_tool_bar">
+        <include layout="@layout/image_toolbar_head"/>
+    </FrameLayout>
+    <com.laojiang.imagepickers.video_module.SampleVideoPlayer
+        android:id="@+id/video_player"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:isShowTop ="false"
+        android:layout_below="@id/fl_tool_bar"
+        />
+    <CheckBox
+        android:id="@+id/ck_image_pager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/imagepicker_ck_pager_selector"
+        android:checked="false"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="20dp"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
+        />
+</RelativeLayout>

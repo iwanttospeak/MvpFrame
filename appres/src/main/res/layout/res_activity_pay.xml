@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg_activity_gray">
+    <include layout="@layout/base_toolbar_head"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/ll_root"
+        android:visibility="visible">
+        <include layout="@layout/res_pay_select_layout"/>
+        <View style="@style/base_v_no_height_weight"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+
+        <TextView
+            style="@style/base_recharge_dialog_text"
+            android:text="总计 :" />
+
+        <TextView
+            android:id="@+id/recharge_num"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="25dp"
+            android:gravity="start|center_vertical"
+            android:text="99.00"
+            android:textColor="@color/base_pay_dialog_yellow"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/dialog_confirm_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="付款"
+            android:textColor="@color/white"
+            android:textSize="@dimen/base_text_size_14" />
+    </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

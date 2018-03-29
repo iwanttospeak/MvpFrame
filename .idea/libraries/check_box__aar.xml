@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="check_box:@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/check_box.aar/92a23ba1e011e1ee7edbadd6988ab82a/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/check_box.aar/92a23ba1e011e1ee7edbadd6988ab82a/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

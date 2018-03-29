@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="28dp"
+    android:gravity="center_vertical"
+    android:background="@drawable/base_bg_gray_stoke"
+     >
+
+    <TextView
+        android:id="@+id/tv_search"
+        style="@style/base_tv_style"
+        android:layout_gravity="center"
+        android:hint="请输入搜索内容"
+        android:drawableStart="@drawable/base_search"
+        android:layout_marginStart="10dp"
+        />
+
+</FrameLayout>
